@@ -1,0 +1,22 @@
+{
+  "name": "pruebacrowdar",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "autor": "Catalina Pinilla Saavedra",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test:chrome": "cypress run --browser chrome --spec 'cypress/e2e/**/*.cy.ts'",
+    "test:firefox": "cypress run --browser firefox --spec 'cypress/e2e/**/*.cy.ts'",
+    "test:edge": "cypress run --browser edge --spec 'cypress/e2e/**/*.cy.ts'",
+    "test:all": "npm run test:chrome && npm run test:firefox",
+    "test:headed": "cypress run --headed --browser chrome",
+    "report": "open cypress/reports/html/index.html",
+    "report:win": "start cypress/reports/html/index.html"
+  },
+  "devDependencies": {
+    "cypress": "^15.14.2",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "typescript": "~6.0.2"
+  }
+}
